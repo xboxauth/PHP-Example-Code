@@ -44,7 +44,7 @@ class XboxAuth
 
     public static function redirect()
     {
-        $url = 'https://' . self::$settings['app_id'] . '.xboxauth.dev';
+        $url = 'https://' . self::$settings['app_id'] . '.xauth.dev';
 
         header('Location: ' . $url);
         exit;
@@ -54,7 +54,7 @@ class XboxAuth
     {
         $result = self::request(
             'POST',
-            'https://claim.xboxauth.dev',
+            'https://claim.xauth.dev',
             [
                 'Content-type: application/json',
             ],
